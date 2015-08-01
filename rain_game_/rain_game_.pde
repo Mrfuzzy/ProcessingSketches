@@ -3,11 +3,12 @@ float xposition = random(990);
 int score = 0;
 ArrayList<Integer> xPositions = new ArrayList<Integer>();
 ArrayList<Integer> yPositions = new ArrayList<Integer>();
-int drops = 50;
+int drops = 70;
 int speed = 11;
 
 void setup() {
-  size(1000, 1000);
+  size(1500, 1500);
+  
   for (int i = 0; i < drops; i++)
   {
     yPositions.add((int) random(-1000));
@@ -20,9 +21,10 @@ void draw() {
     textSize(50);
     text("You Won",500,500);
   } else {
+    
     position+=10;
-    background(255, 255, 255);
-    fill(0, 250, 255);
+    background(random(255),random(255),random(255));
+    fill(0, 255, 0);
     ellipse(xposition, position, 10, 20);
 
     noStroke();
@@ -34,7 +36,7 @@ void draw() {
       int number = yPositions.get(i);
       yPositions.add(i, number + speed);
       yPositions.remove(i + 1);
-      fill(0, 204, 255);
+      fill (255, 0, 0);
       noStroke();
       ellipse(xPositions.get(i), yPositions.get(i), 10, 20);
     }
@@ -52,7 +54,7 @@ void draw() {
       {
         yPositions.add(i, (int) random(-100));
         yPositions.remove(i + 1);
-        xPositions.add(i, (int) random(990));
+        xPositions.add(i, (int) random(1400));
         xPositions.remove(i + 1);
       }
     }
@@ -60,7 +62,9 @@ void draw() {
     if (position>=900) {
       checkCatch((int)xposition);
     }
-    text("you got " + score + " points", 500, 500, 100);
+    fill(0,0,0);
+    textSize(40);
+    text("you got " + score + " points", 650, 200);
   }
 }
 void checkCatch(int x) {
