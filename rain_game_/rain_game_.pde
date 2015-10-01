@@ -24,7 +24,7 @@ void draw() {
     
     position+=10;
     background(random(255),random(255),random(255));
-    fill(0, 255, 0);
+    fill(100, 100, 100);
     ellipse(xposition, position, 10, 20);
 
     noStroke();

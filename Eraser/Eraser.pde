@@ -13,7 +13,7 @@ void draw() {
     }
    //1. draw an ellipse
    noStroke();
-    ellipse(mouseX,mouseY,200,200);
+    ellipse(mouseX,mouseY,100,100);
 }
 // Copyright Wintriss Technical Schools 2013
 
