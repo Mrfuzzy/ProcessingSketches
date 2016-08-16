@@ -17,7 +17,7 @@ void setup() {
 }
 void draw() {
   if (score==10) {
-    background(random(255), random(255), random(255));
+    background(0, , );
     textSize(50);
     text("You Won",500,500);
   } else {
@@ -28,7 +28,7 @@ void draw() {
     ellipse(xposition, position, 10, 20);
 
     noStroke();
-    fill (random(255), random(255), random(255));
+    fill (0, 0, 0);
     rect(mouseX, 900, 50, 100);
 
     for (int i = 0; i < drops; i++)
